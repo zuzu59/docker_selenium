@@ -1,5 +1,5 @@
 #Installe tout ce qu'il faut pour faire tourner Selenium dans undocker Ubuntu
-#zf181217.1023
+#zf181217.1056
 #source: https://www.blazemeter.com/blog/how-to-run-selenium-tests-in-docker
 
 
@@ -37,12 +37,13 @@ RUN wget -q "https://chromedriver.storage.googleapis.com/72.0.3626.7/chromedrive
     && rm /tmp/chromedriver.zip
 
 # xvfb - X server display
-ADD selenium-base-image/xvfb-chromium /usr/bin/xvfb-chromium
+ADD xvfb-chromium /usr/bin/xvfb-chromium
 RUN ln -s /usr/bin/xvfb-chromium /usr/bin/google-chrome \
     && chmod 777 /usr/bin/xvfb-chromium
 
 # create symlinks to chromedriver and geckodriver (to the PATH)
-RUN ln -s /usr/bin/geckodriver /usr/bin/chromium-browser \
+RUN rm /usr/bin/chromium-browser \
+    && ln -s /usr/bin/geckodriver /usr/bin/chromium-browser \
     && chmod 777 /usr/bin/geckodriver \
     && chmod 777 /usr/bin/chromium-browser
 
