@@ -22,9 +22,7 @@ RUN apt-get update && apt-get install -yq \
     libxslt-dev \
     libz-dev \
     xclip \
-    wget \
-    python-pip \
-    nano
+    wget
 
 # GeckoDriver v0.19.1
 #RUN wget -q "https://github.com/mozilla/geckodriver/releases/download/v0.19.1/geckodriver-v0.19.1-linux64.tar.gz" -O /tmp/geckodriver.tgz \
@@ -50,19 +48,4 @@ RUN rm /usr/bin/chromium-browser \
     && chmod 777 /usr/bin/chromium-browser
 
 
-#source: https://github.com/eliranshani/selenium-docker-allure/blob/master/blazedemo_app/Dockerfile
 
-# create project folder with the name code
-RUN mkdir /code
-
-# project scope
-WORKDIR /code
-
-# install requirements
-COPY requirements.txt .
-RUN pip install -r requirements.txt
-
-# Set Dokcer entry
-RUN pwd
-COPY ./docker-entry.sh /code
-ENTRYPOINT ["/code/docker-entry.sh"]
