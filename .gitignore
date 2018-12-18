@@ -1,3 +1,5 @@
+.local/
+.pki/
 .bash_history
 .mozilla/
 toto.png
