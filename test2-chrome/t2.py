@@ -4,7 +4,8 @@ import time
 from selenium import webdriver
 browser = webdriver.Chrome()
 
-browser.get('https://www.epfl.ch/')
+browser.get('https://www.ubuntu.com/')
+#browser.get('https://www.epfl.ch/')
 #browser.get('https://www.epfl.ch/schools/fr/facultes/')
 #browser.get('https://www.epfl.ch/campus/library/fr/bibliotheque/')
 #browser.get('https://www.epfl.ch/about/fr/a-propos/')

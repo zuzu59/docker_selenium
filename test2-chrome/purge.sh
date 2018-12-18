@@ -3,6 +3,6 @@
 #zf181218.1436
 
 docker container rm -f -v selenium-chrome
-#docker image rm -f zubuntu
+docker image rm -f selenium-chrome-zf
 
 #./list.sh
