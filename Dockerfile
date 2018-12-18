@@ -63,6 +63,6 @@ COPY requirements.txt .
 RUN pip install -r requirements.txt
 
 # Set Dokcer entry
-RUN pwd
-COPY ./docker-entry.sh /code
-ENTRYPOINT ["/code/docker-entry.sh"]
+#RUN pwd
+#COPY ./docker-entry.sh /code
+#ENTRYPOINT ["/code/docker-entry.sh"]
