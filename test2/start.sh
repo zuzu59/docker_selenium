@@ -1,5 +1,7 @@
 #Petit script pour lancer le binz
-#zf181218.1425
+#zf181218.1448
+#source: https://hub.docker.com/r/selenium/standalone-chrome/dockerfile
+
 
 docker run -d -v `pwd`:/dev/shm --name="selenium-chrome" selenium/standalone-chrome
 
