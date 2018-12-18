@@ -11,15 +11,15 @@ browser.get('https://www.ubuntu.com/')
 #browser.get('https://www.epfl.ch/about/fr/a-propos/')
 
 
-print("toto")
-print browser.get_window_size()
-print("tutu")
+#print("toto")
+#print browser.get_window_size()
+#print("tutu")
 
-browser.set_window_position(0, 0)
-browser.set_window_size(1250, 5000)
+#browser.set_window_position(0, 0)
+#browser.set_window_size(1250, 5000)
 #wait for the site to adapt
 time.sleep(0.3)
-browser.save_screenshot('toto.png')
+#browser.save_screenshot('toto.png')
 browser.quit()
 
 
