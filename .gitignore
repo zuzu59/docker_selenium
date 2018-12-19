@@ -2,7 +2,9 @@
 .pki/
 .bash_history
 .mozilla/
+.ash_history
 toto.png
+tutu.txt
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

@@ -1,0 +1,20 @@
+#zf1819.0854
+
+FROM ubuntu:bionic
+
+ENV TZ=Europe/Zurich
+RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
+
+#RUN apt-get update && apt-get install -yq \
+#    firefox \
+#    htop \
+#    nano
+
+COPY service_start.sh /
+RUN chmod 755 /service_start.sh
+
+ENTRYPOINT /service_start.sh
+WORKDIR /root
+
+
+
