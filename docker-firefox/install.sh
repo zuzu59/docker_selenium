@@ -16,5 +16,10 @@ puis à l'intérieur du container:
 
 ./test1.sh
 
+ou directement ceci:
+
+docker exec -it docker-firefox /bin/bash /root/work/test1.sh
+
+
 "
 
